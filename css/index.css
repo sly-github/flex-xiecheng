@@ -1,0 +1,308 @@
+body {
+	max-width: 540px;
+	min-width: 320px;
+	margin: 0 auto;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: none;
+	-moz-user-select: none;
+	color: #000000;
+	background: #fafafc;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.search-index {
+	position: fixed;
+	display: flex;
+	top: 0;
+	/* left: 50% ;
+	-webkit-transform:translateX(-50%); //往左自己宽度的50%
+	transform: translateX(-50%); */
+	height: 44px;
+	width: 100%;
+	/* 固定的盒子要有宽度 */
+	min-width: 320px;
+	max-width: 540px;
+	z-index: 12;
+	font-size: .94rem;
+}
+
+.search-index-box {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+.search-index-box input {
+	flex: 1;
+	height: 28px;
+	border: 0;
+	border-radius: 14px;
+	margin-left: 10px;
+	padding-left: 15px;
+}
+
+.search-index .user {
+	width: 44px;
+	height: 44px;
+	/* background-color: #272296; */
+	font-size: 0.75rem;
+	text-align: center;
+	justify-content: center;
+	margin: 0 auto;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.search-index .user::before {
+	content: "";
+	display: block;
+	width: 21px;
+	height: 21px;
+	background: url(../images/sprite.png) no-repeat 0 -36px;
+	background-size: 21px auto;
+	margin: 1px auto;
+}
+
+header.jsmodule {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	overflow: hidden;
+	background: #f2f2f2;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+#img_wrap {
+	position: relative;
+	z-index: 10;
+}
+
+#img_wrap::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	height: 60px;
+	display: block;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, 0)));
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0));
+}
+
+#img_wrap .cm-slide img {
+	width: 100%;
+	display: block;
+}
+
+/* 顶部导航开始 */
+
+.local-nav {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: -52px 12px 12px;
+	position: relative;
+	z-index: 11;
+	background: #FFFFFF;
+	border-radius: 8px;
+	padding: 4px 0 8px;
+}
+
+.local-nav li {
+	flex: 1;
+}
+
+.local-nav li a {
+	display: flex;
+	font-size: 0.75rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+.local-nav li [class^=icon] {
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background-size: 40px auto;
+	display: block;
+	background-image: url(../images/home-fivemain-sprite.png);
+	background-repeat: no-repeat;
+}
+
+
+.icon-local-scenic {
+	background-position: 0 0;
+}
+
+.icon-local-around {
+	background-position: 0 -40px;
+}
+
+.icon-local-food {
+	background-position: 0 -80px;
+}
+
+.icon-local-oneday {
+	background-position: 0 -120px;
+}
+
+.icon-local-strategy {
+	background-position: 0 -160px;
+}
+
+/* 顶部导航结束 */
+
+.grid-nav {
+	/* display: flex; */
+	/* flex-direction: column; */
+	margin: 0 12px 1px;
+	border-radius: 8px;
+	overflow: hidden;
+
+}
+
+.grid-nav .grid-nav-common {
+	display: flex;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+.grid-nav .grid-nav-common.grid-nav-hotel {
+	/* background: linear-gradient(to right,#fa5956,#fb8650 54%); */
+	background: #fb8650;
+	border-bottom: 1px solid #fff;
+}
+
+.grid-nav .grid-nav-common .grid-nav-items {
+	padding: 1.6rem 0;
+	width: 23%;
+	background-position: left bottom;
+	border-left: 1px solid #f2f2f2;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.grid-nav .grid-nav-common .grid-nav-items:first-child {
+	background-position: right bottom;
+	width: 31%;
+	-webkit-box-flex: 0;
+	flex: 0 1 31%;
+	padding-left: 12px;
+	text-align: left;
+}
+
+
+.grid-nav .grid-nav-common .grid-nav-items.grid-nav-items-hotel {
+	background-image: url(../images/nav_items/grid-nav-items-hotel.png);
+	background-repeat: no-repeat;
+	background-size: 73px auto;
+}
+
+.grid-nav .grid-nav-common .grid-nav-items.grid-nav-items-minsu {
+	background-image: url(../images/nav_items/grid-nav-items-minsu.png);
+	background-repeat: no-repeat;
+	background-size: 37px auto;
+}
+
+.grid-nav .grid-nav-common .grid-nav-items.grid-nav-items-jhj {
+	width: 46%;
+}
+
+.grid-nav .grid-nav-common.grid-nav-flight {
+	background-color: #4b8fed;
+}
+
+.grid-nav .grid-nav-common .grid-nav-items.grid-nav-items-flight {
+	background-image: url(../images/nav_items/grid-nav-items-flight.png);
+	background-repeat: no-repeat;
+	background-size: 79px auto;
+}
+
+.grid-nav .grid-nav-common.grid-nav-travel {
+	background-color: #6cd557;
+}
+
+.grid-nav .grid-nav-common .grid-nav-items.grid-nav-items-travel {
+	background-image: url(../images/nav_items/grid-nav-items-travel.png);
+	background-repeat: no-repeat;
+	background-size: 93px auto;
+}
+
+.grid-nav .grid-nav-common .grid-nav-items.grid-nav-items-gaotie {
+	background-image: url(../images/nav_items/grid-nav-items-gaotie.png);
+	background-repeat: no-repeat;
+	background-size: 61px auto;
+}
+
+.subnav-entry{
+	display: flex;
+	height: 110px;
+	flex-direction:column;
+	margin: 0 12px 10px;
+}
+.subnav-entry .subnav-entry-items{
+	display: flex;
+	flex: 1;
+}
+.subnav-entry .subnav-entry-items .subnav-entry-sub-items{
+	flex:1;
+}
+.subnav-entry .subnav-entry-items .subnav-entry-sub-items a{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 12px;
+	padding: 10px 0 0;
+}
+
+.subnav-entry .subnav-entry-items .subnav-entry-sub-items [class^=subnav-icon] {
+	width: 28px;
+	height: 28px;
+	border-radius: 100%;
+	background-size: 28px auto;
+	display: block;
+	background-image: url(../images/un_ico_subnav2x.png);
+	background-repeat: no-repeat;
+}
+.subnav-entry-sub-items .subnav-icon-travel{
+	background-position: 0 0;
+}
+.subnav-entry-sub-items .subnav-icon-wifi{
+	background-position: 0 -28px;
+}
+.subnav-entry-sub-items .subnav-icon-insurance{
+	background-position: 0 -56px;
+}
+
+.subnav-entry-sub-items .subnav-icon-shopping{
+	background-position: 0 -84px;
+}
+
+.subnav-entry-sub-items .subnav-icon-guide{
+	background-position: 0 -112px;
+}
+
+.subnav-entry-sub-items .subnav-icon-flight{
+	background-position: 0 -140px;
+}
+.subnav-entry-sub-items .subnav-icon-card{
+	background-position: 0 -168px;
+}
+.subnav-entry-sub-items .subnav-icon-creditCard{
+	background-position: 0 -196px;
+}
+.subnav-entry-sub-items .subnav-icon-photograph{
+	background-position: 0 -224px;
+}
+.subnav-entry-sub-items .subnav-icon-more{
+	background-position: 0 -252px;
+}
